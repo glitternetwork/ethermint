@@ -474,9 +474,9 @@ Ref: https://keepachangelog.com/en/1.0.0/
 ### State Machine Breaking
 
 * (app, rpc) [tharsis#447](https://github.com/evmos/ethermint/pull/447) Chain ID format has been changed from `<identifier>-<epoch>` to `<identifier>_<EIP155_number>-<epoch>`
-in order to clearly distinguish permanent vs impermanent components.
+  in order to clearly distinguish permanent vs impermanent components.
 * (app, evm) [tharsis#434](https://github.com/evmos/ethermint/pull/434) EVM `Keeper` struct and `NewEVM` function now have a new `trace` field to define
-the Tracer type used to collect execution traces from the EVM transaction execution.
+  the Tracer type used to collect execution traces from the EVM transaction execution.
 * (evm) [tharsis#175](https://github.com/evmos/ethermint/issues/175) The msg `TxData` field is now represented as a `*proto.Any`.
 * (evm) [tharsis#84](https://github.com/evmos/ethermint/pull/84) Remove `journal`, `CommitStateDB` and `stateObjects`.
 * (rpc, evm) [tharsis#81](https://github.com/evmos/ethermint/pull/81) Remove tx `Receipt` from store and replace it with fields obtained from the Tendermint RPC client.
@@ -616,7 +616,7 @@ the Tracer type used to collect execution traces from the EVM transaction execut
   * `crypto.PubKeySecp256k1` and `crypto.PrivKeySecp256k1` are now `ethsecp256k1.PubKey` and `ethsecp256k1.PrivKey`, respectively
   * Moved SDK `SigningAlgo` implementation for Ethermint's Secp256k1 key to `crypto/hd` package.
 * (rpc) [tharsis#588](https://github.com/cosmos/ethermint/pull/588) The `rpc` package has been refactored to account for the separation of each
-corresponding Ethereum API namespace:
+  corresponding Ethereum API namespace:
   * `rpc/namespaces/eth`: `eth` namespace. Exposes the `PublicEthereumAPI` and the `PublicFilterAPI`.
   * `rpc/namespaces/personal`: `personal` namespace. Exposes the `PrivateAccountAPI`.
   * `rpc/namespaces/net`: `net` namespace. Exposes the `PublicNetAPI`.
